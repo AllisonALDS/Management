@@ -6,7 +6,7 @@ function inputComponent(props) {
 
     return (
         <>
-            <div className="">
+            <div className="inputContainer">
                 <label htmlFor="">{labelName}</label>
                 <input type={type}></input>
             </div>

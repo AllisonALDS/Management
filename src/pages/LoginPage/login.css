@@ -1,0 +1,28 @@
+.loginContainer{
+    width: 400px;
+    height: 500px;
+    margin: 0 auto;
+    align-content: center;
+}
+.loginForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+}
+.loginForm button{
+    padding: 10px;
+}
+.inputContainer{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+.inputContainer input{
+    padding: 13px;
+    border-radius: 10px;
+}
+.inputContainer label{
+    font-size: 25px;
+    font-weight: 600;
+}
