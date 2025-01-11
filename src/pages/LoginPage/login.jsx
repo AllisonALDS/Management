@@ -1,4 +1,4 @@
-import InputComponent from '../../components/inputComponent'
+import InputComponent from '../../components/Inputs/inputComponent'
 import './login.css'
 
 export default function Login(){

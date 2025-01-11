@@ -4,6 +4,7 @@ import './App.css'
 import IndexPage from './pages/HomePage/index'
 import Login from './pages/LoginPage/login'
 import Register from './pages/registerPage/register'
+import Management from './pages/pageManagement/management'
 
 
 const browserRouter = createBrowserRouter(createRoutesFromElements(
@@ -11,13 +12,10 @@ const browserRouter = createBrowserRouter(createRoutesFromElements(
     <Route index element={ <IndexPage /> } />
     <Route path='/login' element={ <Login  /> } />
     <Route path='/register' element={ <Register  /> } />
+    <Route path='/Agendamento' element={ <Management  /> } />
   </Route>
 
 ))
-
-
-
-
 
 function App() {
   

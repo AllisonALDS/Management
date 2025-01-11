@@ -1,5 +1,5 @@
 import '../LoginPage/login.css'
-import InputComponent from '../../components/inputComponent'
+import InputComponent from '../../components/Inputs/inputComponent'
 
 export default function Register() {
     return (
