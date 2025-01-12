@@ -55,6 +55,7 @@
 
 .containerMain{
     display: flex;
+    flex-direction: column;
     border: 1px solid;
     width: 100%;
     height: 100vh;
@@ -65,10 +66,18 @@
     gap: 50px;
     margin: 0 auto;
     margin-top: 50px;
+    margin-bottom: 100px;
     .service1, .service2{
         p{
             color: black;
             font-size: 35px;
         }
     }
+}
+.containerMain .container-form-services{
+    display: none;
+    border: 1px solid;
+    width: 400px;
+    height: 500px;
+    margin: 0 auto;
 }

@@ -6,6 +6,7 @@ export default function mainManagement() {
     const [info, setInfo] = useState('')
     const [info2, setInfo2] = useState('')
     const [botao, setbotao] = useState('')
+    let mostrar = true
 
     function getInfoHandler(event) {
         event.preventDefault();
@@ -15,14 +16,23 @@ export default function mainManagement() {
         const selectElement2 = document.getElementById('select2')
         setInfo2(selectElement2.value)
         const botao = document.getElementById('butao')
+        botao.innerHTML = "CONFIRME NOVAMENTE"
 
         if (info2 == "" || info == "") {
             console.log('vazio')
+            function changeStyle(){
+                const div = document.getElementById("container-form")
+                div.style.display = "none"
+            }
+            changeStyle()
+
         } else {
-            botao.innerHTML = "CONFIRME NOVAMENTE"
-            console.log(info)
-            console.log(info2)
-            alert("foi")
+            botao.innerHTML = "CONFIRME"
+            function changeStyle(){
+                const div = document.getElementById("container-form")
+                div.style.display = "block"
+            }
+            changeStyle()
         }
     }
 
@@ -59,6 +69,9 @@ export default function mainManagement() {
                         </div>
                     </div>
                 </div>
+                
+                <MainForm />
+
             </div>
         </>
     )
