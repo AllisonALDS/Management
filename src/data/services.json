@@ -1,0 +1,4 @@
+[
+    { "id": 1, "name": "Corte de Cabelo", "description": "Corte simples de cabelo." },
+    { "id": 2, "name": "Massagem", "description": "Massagem relaxante." }
+  ]

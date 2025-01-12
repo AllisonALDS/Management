@@ -5,6 +5,8 @@ import IndexPage from './pages/HomePage/index'
 import Login from './pages/LoginPage/login'
 import Register from './pages/registerPage/register'
 import Management from './pages/pageManagement/management'
+import AdminPanel from './components/AdminPainel/AdminPanel'
+import MeuAdminPainel from './components/AdminPainel/MeuAdminPainel'
 
 
 const browserRouter = createBrowserRouter(createRoutesFromElements(
@@ -13,6 +15,7 @@ const browserRouter = createBrowserRouter(createRoutesFromElements(
     <Route path='/login' element={ <Login  /> } />
     <Route path='/register' element={ <Register  /> } />
     <Route path='/Agendamento' element={ <Management  /> } />
+    <Route path='/Agendamento2' element={ <AdminPanel  /> } />
   </Route>
 
 ))

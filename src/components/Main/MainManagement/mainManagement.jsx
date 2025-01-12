@@ -1,5 +1,7 @@
 import { useState } from "react"
 import MainForm from "./formManagement"
+import Footer from "../../Footer/footer"
+import '../../Footer/footer.css'
 
 export default function mainManagement() {
 
@@ -25,9 +27,9 @@ export default function mainManagement() {
                 div.style.display = "none"
             }
             changeStyle()
-
+            
         } else {
-            botao.innerHTML = "CONFIRME"
+            botao.innerHTML = "VERIFICIAR"
             function changeStyle(){
                 const div = document.getElementById("container-form")
                 div.style.display = "block"
@@ -70,8 +72,8 @@ export default function mainManagement() {
                     </div>
                 </div>
                 
-                <MainForm />
-
+                <MainForm valueHour={info2} service={info} />
+                <Footer/>
             </div>
         </>
     )
