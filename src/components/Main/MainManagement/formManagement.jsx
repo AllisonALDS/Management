@@ -6,7 +6,7 @@ export default function FormManagement(props) {
     const service = props.service
     
     const [services, setServices] = useState([]);
-    const [newService, setNewService] = useState({ name: '', description: '', price: '' });
+    const [newService, setNewService] = useState({ name: '', description: '', price: '', data: '' });
 
     function Alert(){
         alert("Agendamento confirmado!")
@@ -22,7 +22,8 @@ export default function FormManagement(props) {
               id: services.length + 1,
               name: newService.name, 
               description: newService.description,
-              price: newService.price // Novo campo preço
+              price: newService.price, // Novo campo preço
+              data: newService.data
             };
 
             const existingServices = localStorage.getItem('services')
@@ -36,7 +37,7 @@ export default function FormManagement(props) {
 
             setServices(updatedServices);
             
-            setNewService({ name: '', description: '', price: '' });
+            setNewService({ name: '', description: '', price: '', data: '' });
         };
         addService()
     }
@@ -53,7 +54,7 @@ export default function FormManagement(props) {
                     </div>
                     <div className="form-inputs">
                         <label htmlFor="date">DATA</label>
-                        <input type="date" id="date" required/>
+                        <input type="date" id="date" onChange={(e) => setNewService({ ...newService, data: e.target.value })} required/>
                     </div>
                     <div className="form-inputs">
                         <label htmlFor="service" >SERVIÇO</label>

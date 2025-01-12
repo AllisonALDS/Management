@@ -8,7 +8,7 @@ const fetchServicesFromLocalStorage = () => {
 
 const AdminPanel = () => {
   const [services, setServices] = useState([]);
-  const [newService, setNewService] = useState({ name: '', description: '', price: '' });
+  const [newService, setNewService] = useState({ name: '', description: '', price: '', data: '' });
 
   // Carregar os serviços ao montar o componente
   useEffect(() => {
@@ -41,7 +41,7 @@ const AdminPanel = () => {
       <ul>
         {services.map(service => (
           <li key={service.id}>
-            {service.name} - {service.description} - {service.price}
+            Serviço: {service.name} - Descrição {service.description} - Hora: {service.price} - Data: {service.data}
             <button onClick={() => deleteService(service.id)}>Excluir</button>
           </li>
         ))}
