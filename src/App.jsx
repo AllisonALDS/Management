@@ -1,12 +1,10 @@
 import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route } from 'react-router-dom'
-import { useState } from 'react'
 import './App.css'
 import IndexPage from './pages/HomePage/index'
 import Login from './pages/LoginPage/login'
 import Register from './pages/registerPage/register'
 import Management from './pages/pageManagement/management'
-import AdminPanel from './components/AdminPainel/AdminPanel'
-import MeuAdminPainel from './components/AdminPainel/MeuAdminPainel'
+import AdminPanel from './pages/AdminPainel/AdminPanel'
 
 
 const browserRouter = createBrowserRouter(createRoutesFromElements(

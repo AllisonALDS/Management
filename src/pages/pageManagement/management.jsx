@@ -7,8 +7,6 @@ import './management.css'
 function getInfo(){
     
 }
-
-
 export default function Scheduling(){
     return (
         <>
