@@ -44,7 +44,7 @@ export default function mainManagement() {
                 <div className="services">
                     <div className="service1">
                         <p>Agendar um Serviço</p>
-                        <div className="">
+                        <div className="input">
                             <label htmlFor="">Escolha</label>
                             <select name="" id="select1">
                                 <option value=""></option>
@@ -58,7 +58,8 @@ export default function mainManagement() {
                     </div>
                     <div className="service2">
                         <p>Escolha um Horário</p>
-                        <div className="">
+                        <div className="input">
+                        <label htmlFor="">Escolha</label>
                             <select name="" id="select2">
                                 <option value=""></option>
                                 <option value="12:50" >12:50</option>

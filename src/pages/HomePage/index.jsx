@@ -1,11 +1,11 @@
 import "./index.css"
-
+import "../../components/Menu/menu.css"
+import Menu from "../../components/Menu/menu"
 
 function Index() {
     return (
         <>
-            <a href="/login">Login</a>
-            <a href="/register">Register</a>
+            <Menu />
         </>
     )
 }

@@ -16,6 +16,7 @@ const AdminPanel = () => {
   }, []);
 
   const deleteService = (serviceId) => {
+    console.log(serviceId)
     const updatedServices = services.filter(service => service.id !== serviceId);
     setServices(updatedServices);
 
