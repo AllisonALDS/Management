@@ -35,6 +35,9 @@
                 color: white;
             }
         }
+        .option1:hover{
+            zoom: 0.95;
+        }
     }
     .config{
         display: flex;

@@ -1,6 +1,9 @@
 import viteLogo from "../../assets/react.svg"
+import { IoMdCreate } from "react-icons/io";
+import { GrConfigure } from "react-icons/gr";
+import { FaNetworkWired } from "react-icons/fa";
 
-export default function Menu(){
+export default function Menu() {
     return (
         <>
             <div className="container-menu">
@@ -10,37 +13,21 @@ export default function Menu(){
                 </div>
                 <div className="options">
                     <div className="option1">
-                        <p>Icon </p>
-                        <p>nameFunction</p>
+                        <IoMdCreate />
+                        <a href="/Agendamento"><p>Criar Novo Serviço</p></a>
                     </div>
                     <div className="option1">
-                        <p>Icon </p>
-                        <p>nameFunction</p>
+                        <FaNetworkWired />
+                        <a href="/Agendamento2"><p>Gerenciar Serviços</p></a>
                     </div>
-                    <div className="option1">
-                        <p>Icon </p>
-                        <p>nameFunction</p>
-                    </div>
-                    <div className="option1">
-                        <p>Icon </p>
-                        <p>nameFunction</p>
-                    </div>
-                    <div className="option1">
-                        <p>Icon </p>
-                        <p>nameFunction</p>
-                    </div>
-                    <div className="option1">
-                        <p>Icon </p>
-                        <p>nameFunction</p>
-                    </div>
-                
+
                 </div>
                 <div className="config">
-                    <p>icon </p>
+                    <GrConfigure />
                     <p>Configurações</p>
                 </div>
 
             </div>
         </>
-    )    
+    )
 }

@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import './AdminPanel.css';
 import Menu from '../../components/Menu/menu';
+import HeaderAdmin from '../../components/AdminPainel/header/headerAdmin';
+import HeaderAdminCategory from '../../components/AdminPainel/categorys/headerAdminCategory';
+
 
 const fetchServicesFromLocalStorage = () => {
   const savedServices = localStorage.getItem('services');
@@ -32,24 +35,54 @@ const AdminPanel = () => {
   }
 
   return (
-    <div className='container-painel-admin'>
+    <div className='container-painel-admin' >
+      <div>
+        <Menu />
+      </div>
 
-      <Menu/>
+      {/* Funções Aparecer Servições */}
+      <div className='container-right'>
 
-      <h1>Painel Administrativo</h1>
-      <h2>Serviços Disponíveis</h2>
-      <h3 id='mostrar'> {contar()} </h3>
-      <ul>
-        {services.map(service => (
+        <HeaderAdmin />
+        <HeaderAdminCategory qtd={contar()} />
 
-          
-          <li key={service.id}>
-            Serviço: {service.name} - Descrição {service.description} - Hora: {service.price} - Data: {service.data}
-            <button onClick={() => deleteService(service.id)}>Excluir</button>
-          </li>
-        ))}
-      </ul>
+        <div className="container-services">
+          <div className="container-services-titles">
+            <p>Horario</p>
+            <p>DATA</p>
+            <p>SERVIÇO</p>
+            <p>Observação</p>
+          </div>
+          <ul>
+            {services.map(service => (
 
+
+              <li key={service.id}>
+
+                <div className="options1">
+                  {service.name}
+                </div>
+
+                <div className="options1">
+                  {service.description}
+                </div>
+
+                <div className="options1">
+                  {service.price}
+                </div>
+
+                <div className="options1">
+                  {service.data}
+                </div>
+
+                <div className="options2">
+                  <button onClick={() => deleteService(service.id)}>Excluir</button>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
 
     </div>
   );
