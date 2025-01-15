@@ -2,6 +2,8 @@ import { useState } from "react"
 import MainForm from "./formManagement"
 import Footer from "../../Footer/footer"
 import '../../Footer/footer.css'
+import Header from "../../Header/ManagementHeader"
+import HeaderAdmin from "../../AdminPainel/header/headerAdmin"
 
 export default function mainManagement() {
 

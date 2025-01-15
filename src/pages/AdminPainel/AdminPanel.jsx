@@ -10,7 +10,7 @@ const fetchServicesFromLocalStorage = () => {
   return savedServices ? JSON.parse(savedServices) : [];
 };
 
-const AdminPanel = () => {
+const AdminPanel = (props) => {
   const [services, setServices] = useState([]);
   const [newService, setNewService] = useState({ name: '', description: '', price: '', data: '' });
 
@@ -43,7 +43,7 @@ const AdminPanel = () => {
       {/* Funções Aparecer Servições */}
       <div className='container-right'>
 
-        <HeaderAdmin />
+        <HeaderAdmin  />
         <HeaderAdminCategory qtd={contar()} />
 
         <div className="container-services">

@@ -9,8 +9,7 @@ import AdminPanel from './pages/AdminPainel/AdminPanel'
 
 const browserRouter = createBrowserRouter(createRoutesFromElements(
   <Route path='/' >
-    <Route index element={ <IndexPage /> } />
-    <Route path='/login' element={ <Login  /> } />
+    <Route index element={ <Login/> } />
     <Route path='/register' element={ <Register  /> } />
     <Route path='/Agendamento' element={ <Management  /> } />
     <Route path='/Agendamento2' element={ <AdminPanel  /> } />
